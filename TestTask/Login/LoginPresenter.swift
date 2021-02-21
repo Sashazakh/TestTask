@@ -14,15 +14,14 @@ final class LoginPresenter {
 
 extension LoginPresenter: LoginOutput {
     func didLoginButtonTap(login: String?, password: String?) {
-        print("didTap")
-        guard let login = login, !login.isEmpty else { view?.showAlert(title: "Ошибка",
-                                                       message: "Вы не ввели логин!")
+        guard let login = login, !login.isEmpty else { view?.showAlert(title: "Error!",
+                            message: "Input your login!")
             return
         }
         
         guard let password = password, !password.isEmpty else {
-            view?.showAlert(title: "Ошибка",
-                            message: "Вы не ввели пароль!")
+            view?.showAlert(title: "Error!",
+                            message: "Input your password!")
             return
         }
         
